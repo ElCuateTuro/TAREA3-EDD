@@ -5,7 +5,7 @@ public class Amistad {
     private Persona persona;
     private int id;
     LocalDateTime fecha;
-    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/mm/YYYY");
+    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/YYYY");
 
     Amistad(Persona p, LocalDateTime fecha) {
         this.persona = p;

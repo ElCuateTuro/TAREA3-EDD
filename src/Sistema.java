@@ -6,7 +6,7 @@ import java.util.Hashtable;
 
 public class Sistema {
     Hashtable usuarios;
-    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/mm/YYYY");
+    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/YYYY");
 
     Sistema(){
         usuarios = new Hashtable();
