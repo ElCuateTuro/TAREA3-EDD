@@ -1,20 +1,31 @@
-import java.time.*;
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Amistad {
     private Persona persona;
     private int id;
-    LocalDateTime fecha;
-    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+    private LocalDate fecha;
+    private DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-    Amistad(Persona p, LocalDateTime fecha) {
+    public Amistad(Persona p, LocalDate fecha) {
         this.persona = p;
-        this.fecha=fecha;
+        this.fecha = fecha;
         this.id = p.getId();
     }
-    int getId(){return id;}
-    Persona getPersona(){return persona;}
-    String getFecha(){
+
+    public int getId() {
+        return id;
+    }
+
+    public Persona getPersona() {
+        return persona;
+    }
+
+    public String getFecha() {
         return fecha.format(formato);
+    }
+
+    public LocalDate getFechaRaw() {
+        return fecha;
     }
 }
